@@ -20,7 +20,7 @@ class Membro extends Component {
     return (
       <div>
         <h1>Olá {this.state.nome}</h1>
-        <button onClick={this.entrar}>Entrar</button>
+        <button onClick={this.entrar}>Acessar</button>
         <button onClick={() => this.setState({nome: 'Visitante'})}>Sair</button>
       </div>
     );
