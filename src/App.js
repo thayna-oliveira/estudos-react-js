@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.css';
 
 class App extends Component {
 
@@ -6,56 +7,53 @@ class App extends Component {
     super(props);
 
     this.state = {
-      form: {
-        nome: '',
-        email: '',
-        senha: '',
-        sexo: ''
-      }
+      frase: ''
     };
 
-    this.dadosForm = this.dadosForm.bind(this);
+    this.frases = [
+      'A vida trará coisas boas se tiveres paciência.',
+      'Defeitos e virtudes são apenas dois lados da mesma moeda.',
+      'A maior de todas as torres começa no solo.',
+      'Demonstre amor e alegria em todas as oportunidades e verás que a paz nasce dentro de você.',
+      'Não compense na ira o que lhe falta na razão.',
+      'Não há que ser forte. Há que ser flexível.',
+      'Siga os bons e aprenda com eles.',
+      'Não importa o tamanho da montanha, ela não pode tapar o sol.',
+      'O bom-senso vai mais longe do que muito conhecimento.',
+      'Quem quer colher rosas deve suportar os espinhos.',
+      'São os nossos amigos que nos ensinam as mais valiosas lições.'
+    ];
+
+    this.quebraBiscoito = this.quebraBiscoito.bind(this);
+
   }
 
-  dadosForm(e){
-      let form = this.state.form;
-      form[e.target.name] = e.target.value;
-      this.setState({form: form});
+  quebraBiscoito(){
+    let state = this.state;
+    let numero = Math.floor(Math.random() * this.frases.length);
+    state.frase = '"' + this.frases[numero] + '"';
+    this.setState(state);
   }
 
   render() {
     return (
-      <div>
-        <h1>Login </h1>
-        Nome:
-        <input type="text" name="nome" value={this.state.form.nome}
-          onChange={this.dadosForm}></input>
-
-        E-mail:
-        <input type="email" name="email" value={this.state.form.email}
-          onChange={this.dadosForm}></input>
-
-        Senha:
-        <input type="password" name="senha" value={this.state.form.senha}
-          onChange={this.dadosForm}></input>
-
-        Sexo:
-        <select name="sexo" value={this.state.form.sexo} onChange={this.dadosForm}>
-          <option value="M">Masculino</option>
-          <option value="F">Feminino</option>
-        </select>
-
-
-        <div>
-          <h2>Nome: {this.state.form.nome} |
-          Email: {this.state.form.email} |
-          Senha: {this.state.form.senha} |
-          Sexo: {this.state.form.sexo}
-          </h2>
-        </div>
+      <div className="container">
+        <img className="img" src={require('./assets/biscoito.png')}></img>
+        <Botao nome='Abrir biscoito' acao={this.quebraBiscoito}/>
+        <h3 className="textoFrase">{this.state.frase}</h3>
       </div>
     );
   }
+}
+
+class Botao extends Component {
+  render() {
+    return (
+      <div>
+        <button className="btn" onClick={this.props.acao}>{this.props.nome}</button>
+      </div>
+    );
+  };
 }
 
 export default App;
