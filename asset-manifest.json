@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/estudos-react-js/static/css/main.24c6ef9b.chunk.css",
+    "main.js": "/estudos-react-js/static/js/main.d881cee2.chunk.js",
+    "main.js.map": "/estudos-react-js/static/js/main.d881cee2.chunk.js.map",
+    "runtime~main.js": "/estudos-react-js/static/js/runtime~main.c817ba9c.js",
+    "runtime~main.js.map": "/estudos-react-js/static/js/runtime~main.c817ba9c.js.map",
+    "static/js/2.0f58faaa.chunk.js": "/estudos-react-js/static/js/2.0f58faaa.chunk.js",
+    "static/js/2.0f58faaa.chunk.js.map": "/estudos-react-js/static/js/2.0f58faaa.chunk.js.map",
+    "index.html": "/estudos-react-js/index.html",
+    "precache-manifest.5beb7e6a4854bbae0125634f3addd354.js": "/estudos-react-js/precache-manifest.5beb7e6a4854bbae0125634f3addd354.js",
+    "service-worker.js": "/estudos-react-js/service-worker.js",
+    "static/css/main.24c6ef9b.chunk.css.map": "/estudos-react-js/static/css/main.24c6ef9b.chunk.css.map",
+    "static/media/biscoito.png": "/estudos-react-js/static/media/biscoito.a2bd231c.png"
+  }
+}
