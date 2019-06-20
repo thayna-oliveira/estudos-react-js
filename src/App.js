@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.css';
+import TodoList from './components/TodoList';
 
 class App extends Component {
 
@@ -7,42 +7,21 @@ class App extends Component {
     super(props);
 
     this.state = {
-      nutri: []
+      
     };
   }
 
-  componentDidMount(){
-    let url = 'https://sujeitoprogramador.com/rn-api/?api=posts';
-
-    fetch(url)
-    .then((r) => r.json())
-    .then((json)=> {
-      let state = this.state;
-      state.nutri = json;
-      this.setState(state);
-      console.log(json);
-    });
-  }
+  
 
   render() {
     return (
       <div className="container">
 
         <header>
-            <strong>React Nutri</strong>
+            <strong>Lista de Tarefas Nutri</strong>
         </header>
 
-        {this.state.nutri.map((item) => {
-            return(
-              <article key={item.id} className="post">
-                <strong className="titulo">{item.titulo}</strong>
-                <img className="capa" src={item.capa}/>
-                <p className="subtitulo">{item.subtitulo}</p>
-                <a className="botao" href="#">Acessar</a>
-              </article>
-
-            );
-        })}
+        <TodoList></TodoList>
       </div>
     );
   }

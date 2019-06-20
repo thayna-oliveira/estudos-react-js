@@ -40,6 +40,11 @@ header strong:hover{
     box-shadow: 0px 2px 4px rgba(3, 27, 78, 0.04);
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
 .titulo{
     font-size: 25px;
     margin-bottom: 25px;
