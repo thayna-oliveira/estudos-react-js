@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import TodoList from './components/TodoList';
+import './style.css';
+
 
 class App extends Component {
 
@@ -7,21 +9,24 @@ class App extends Component {
     super(props);
 
     this.state = {
-      
+
     };
   }
 
-  
+
 
   render() {
     return (
       <div className="container">
 
-        <header>
-            <strong>Lista de Tarefas Nutri</strong>
-        </header>
+        <div className="box">
+          <header>
+            <h1>Lista de Tarefas</h1>
+          </header>
 
-        <TodoList></TodoList>
+          <TodoList></TodoList>
+        </div>
+
       </div>
     );
   }
