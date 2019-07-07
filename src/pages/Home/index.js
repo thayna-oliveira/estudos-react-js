@@ -47,7 +47,7 @@ class Home extends Component {
                   </div>
                   <div className="card-description">
                     <h2>{filme.nome}</h2>
-                    <Link to="/" className="btn">veja mais</Link>
+                    <Link to={`/filme/${filme.id}`} className="btn">veja mais</Link>
                   </div>
                 </div>
               </article>
