@@ -1,14 +1,15 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Home from './pages/Home';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Home from './pages/Home';
+
 
 const Routes = () => {
     return (
-        <BrowserRouter> 
+        <BrowserRouter>
+            <Header />
             <Switch>
-                <Header></Header>
-                <Route exact path="/" component={Home}/>
+                <Route exact path="/" component={Home} />
             </Switch>
         </BrowserRouter>
     );
