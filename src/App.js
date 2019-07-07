@@ -1,5 +1,6 @@
 import React, { Component } from 'react'; 
 import Routes from './routes'; 
+import './style.css';
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <div className="app">
         <Routes/>
+        ;;..
       </div>
     );
   }
