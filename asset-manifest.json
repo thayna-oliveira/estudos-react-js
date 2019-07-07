@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/estudos-react-js/static/css/main.8e27e8a7.chunk.css",
-    "main.js": "/estudos-react-js/static/js/main.85990d62.chunk.js",
-    "main.js.map": "/estudos-react-js/static/js/main.85990d62.chunk.js.map",
+    "main.css": "/estudos-react-js/static/css/main.e91045f6.chunk.css",
+    "main.js": "/estudos-react-js/static/js/main.64868598.chunk.js",
+    "main.js.map": "/estudos-react-js/static/js/main.64868598.chunk.js.map",
     "runtime~main.js": "/estudos-react-js/static/js/runtime~main.c817ba9c.js",
     "runtime~main.js.map": "/estudos-react-js/static/js/runtime~main.c817ba9c.js.map",
-    "static/js/2.4e81ba5b.chunk.js": "/estudos-react-js/static/js/2.4e81ba5b.chunk.js",
-    "static/js/2.4e81ba5b.chunk.js.map": "/estudos-react-js/static/js/2.4e81ba5b.chunk.js.map",
+    "static/js/2.8922f433.chunk.js": "/estudos-react-js/static/js/2.8922f433.chunk.js",
+    "static/js/2.8922f433.chunk.js.map": "/estudos-react-js/static/js/2.8922f433.chunk.js.map",
     "index.html": "/estudos-react-js/index.html",
-    "precache-manifest.1a07503da81c7c1022da41d8a7c19d52.js": "/estudos-react-js/precache-manifest.1a07503da81c7c1022da41d8a7c19d52.js",
+    "precache-manifest.bb7f196e28209adeb43ce93ca217c257.js": "/estudos-react-js/precache-manifest.bb7f196e28209adeb43ce93ca217c257.js",
     "service-worker.js": "/estudos-react-js/service-worker.js",
-    "static/css/main.8e27e8a7.chunk.css.map": "/estudos-react-js/static/css/main.8e27e8a7.chunk.css.map",
-    "static/media/cronometro.png": "/estudos-react-js/static/media/cronometro.54825791.png"
+    "static/css/main.e91045f6.chunk.css.map": "/estudos-react-js/static/css/main.e91045f6.chunk.css.map"
   }
 }
