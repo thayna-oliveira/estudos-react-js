@@ -1,3 +1,3 @@
-const autenticado =  () => {
-    return false;
+export const autenticado = () => {
+    return true;
 }

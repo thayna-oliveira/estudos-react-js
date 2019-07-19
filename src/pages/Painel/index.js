@@ -12,10 +12,7 @@ class Painel extends Component {
   render() {
     return (
       <div>
-
-          <h1>Bem vindo</h1>
-
-          
+          <h1>Bem vindo, logado</h1>
       </div>
 
     );

@@ -3,18 +3,18 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import Start from './pages/Start'; 
 import Painel from './pages/Painel'; 
-import {autenticcado} from './auth'
+import { autenticado } from './auth';
 
 
-const PrivateRoute = ({component: Component, ... rest}) => (
+const PrivateRoute = ({component: Component, ...rest}) => (
 
-<Route {...rest} render = {props => (
-    autenticado()? (
-        <Component {...props}/>
-    ) : (
-        <Redirect to={{pathname:'/'}}/>
-    )
-)}/>
+    <Route {...rest} render = {props => (
+        autenticado() ? (
+            <Component {...props}/>
+        ) : (
+            <Redirect to={{pathname: '/', state: {from: props.location}}}/>
+        )
+    )}/>
 );
 
 const Routes = () => {
