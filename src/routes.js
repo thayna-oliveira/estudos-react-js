@@ -22,7 +22,7 @@ const Routes = () => {
         <BrowserRouter> 
             <Switch>
                 <Route exact path="/" component={Start} /> 
-                <Route exact path="/painel" component={Painel} /> 
+                <PrivateRoute exact path="/painel" component={Painel} /> 
             </Switch>
         </BrowserRouter>
     );
