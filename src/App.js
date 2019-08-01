@@ -1,24 +1,14 @@
-import React, { Component } from 'react'; 
-import Routes from './routes.js'; 
-import './style.css';
+import React from 'react';  
+import { Container, Head } from './styles';
 
-class App extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    };
-  }
-
-  render() {
+function App() {
     return (
-      <div className="app">
-        <Routes/>
-      </div>
+      <Container>
+        <Head cor="yellow">
+          <a href="#">Styled Components</a>
+        </Head>
+      </Container>
     );
-  }
 }
 
 export default App;
