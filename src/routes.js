@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import Start from './pages/Start';
 
-import Start from './pages/Start'; 
-import Painel from './pages/Painel'; 
+/*
+
 import { autenticado } from './auth';
-
 
 const PrivateRoute = ({component: Component, ...rest}) => (
 
@@ -17,12 +17,12 @@ const PrivateRoute = ({component: Component, ...rest}) => (
     )}/>
 );
 
+*/
 const Routes = () => {
     return (
         <BrowserRouter> 
             <Switch>
                 <Route exact path="/" component={Start} /> 
-                <PrivateRoute exact path="/painel" component={Painel} /> 
             </Switch>
         </BrowserRouter>
     );
