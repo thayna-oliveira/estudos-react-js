@@ -1,32 +1,20 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'; 
+import React from 'react';
+import { HashLink as Link} from 'react-router-hash-link';
 
-class Header extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    };
-  }
-
-  render() {
+function Header() {
     return (
-      <div className="navbar"> 
-        <div className="container">
-          <div className="header">
-            <div className="logo"><h1>Popcorn.</h1></div>
-            <ul className="nav">
-              <li><Link to="/dsasa">Pagina Inicial</Link></li>
-              <li><Link to="/dsasa">Novidades</Link></li>
-            </ul>
+      <header>
+          <div className="menu">
+            <nav>
+              <ul>
+                <li><Link smooth to="#home">Home</Link></li>
+                <li><Link smooth to="#sobre">Sobre</Link></li>
+                <li><Link smooth to="#contato">Contato</Link></li>
+              </ul>
+            </nav>
           </div>
-        </div>
-      </div>
-
+      </header>
     );
-  }
 }
 
 export default Header;
