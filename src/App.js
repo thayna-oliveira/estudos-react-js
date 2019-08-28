@@ -6,10 +6,13 @@ export default class App extends Component{
   constructor(props){
     super(props);
     this.state = {
+      tokenInput: '',
       token: 'Carregando...',
       nome: '',
       idade: ''
     };
+
+    this.cadastrar = this.cadastrar.bind(this);
 
     // Your web app's Firebase configuration
     let firebaseConfig = {
@@ -25,17 +28,17 @@ export default class App extends Component{
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-    /* firebase.database().ref('token').on('value', (snapshot) => {
-      let state = this.state;
-      state.token = snapshot.val();
-      this.setState(state);
-    });*/
-
-    firebase.database().ref('token').once('value').then((snapshot) => {
+    firebase.database().ref('token').on('value', (snapshot) => {
       let state = this.state;
       state.token = snapshot.val();
       this.setState(state);
     });
+
+    /*firebase.database().ref('token').once('value').then((snapshot) => {
+      let state = this.state;
+      state.token = snapshot.val();
+      this.setState(state);
+    });*/
 
     firebase.database().ref('usuarios').child(2).once('value').then((snapshot) => {
       let state = this.state;
@@ -44,6 +47,14 @@ export default class App extends Component{
       this.setState(state);
     });
 
+
+  }
+
+  cadastrar(e){
+
+    firebase.database().ref('token').set(this.state.tokenInput); 
+
+    e.preventDefault();
   }
 
   render(){
@@ -51,6 +62,11 @@ export default class App extends Component{
     const {token, nome, idade} = this.state;
     return (
       <div>
+        <form onSubmit={this.cadastrar}>
+          <input type="text" value={this.state.tokenInput}
+              onChange={(e)=> this.setState({tokenInput: e.target.value})}/>
+          <button type="submit">Cadastrar</button>
+        </form>
         <h1>Token: {token}</h1>
         <h1>Nome: {nome}</h1>
         <h1>Idade: {idade}</h1>
