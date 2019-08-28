@@ -5,7 +5,11 @@ export default class App extends Component{
 
   constructor(props){
     super(props);
-    this.state = {};
+    this.state = {
+      token: 'Carregando...',
+      nome: '',
+      idade: ''
+    };
 
     // Your web app's Firebase configuration
     let firebaseConfig = {
@@ -20,11 +24,37 @@ export default class App extends Component{
     
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+
+    /* firebase.database().ref('token').on('value', (snapshot) => {
+      let state = this.state;
+      state.token = snapshot.val();
+      this.setState(state);
+    });*/
+
+    firebase.database().ref('token').once('value').then((snapshot) => {
+      let state = this.state;
+      state.token = snapshot.val();
+      this.setState(state);
+    });
+
+    firebase.database().ref('usuarios').child(2).once('value').then((snapshot) => {
+      let state = this.state;
+      state.nome = snapshot.val().nome;
+      state.idade = snapshot.val().idade;
+      this.setState(state);
+    });
+
   }
 
   render(){
+
+    const {token, nome, idade} = this.state;
     return (
-      <div>Funcionando!</div>
+      <div>
+        <h1>Token: {token}</h1>
+        <h1>Nome: {nome}</h1>
+        <h1>Idade: {idade}</h1>
+      </div>
     );
   }
 }
